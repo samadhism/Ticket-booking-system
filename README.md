@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Ticket Booking System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+The Ticket Booking System is a real-time platform designed to manage and streamline the ticketing process for events. Built with a Spring Boot backend and a React.js frontend, the system supports secure user authentication, seamless ticket purchasing, and administrative controls for event management. Its interactive UI and robust functionality make it an ideal solution for event organizers and attendees alike.
 
-## Available Scripts
+## Setup Instructions
 
-In the project directory, you can run:
+### Prerequisites
+To set up and run the application, ensure you have the following installed:
 
-### `npm start`
+- **Java Development Kit (JDK)**: Version 11 or higher
+- **Node.js and npm**: Latest LTS version
+- **Maven**: Version 3.6.3 or higher
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend Setup
+1. Navigate to the backend directory of the project:
+   ```bash
+   cd backend
+   ```
+2. Build the backend application using Maven:
+   ```bash
+   mvn clean install
+   ```
+3. Run the Spring Boot application:
+   ```bash
+   mvn spring-boot:run
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend Setup
+1. Navigate to the frontend directory of the project:
+   ```bash
+   cd frontend
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the React.js application:
+   ```bash
+   npm start
+   ```
+4. Access the application at `http://localhost:3000`.
 
-### `npm test`
+## Usage Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Configuring the System
+1. Ensure the backend and frontend are running.
+2. Create initial data by running the provided SQL script (`initial_data.sql`) in your MySQL database.
+3. Open the application in your browser and log in as an administrator to configure events and ticket types.
 
-### `npm run build`
+### UI Controls
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Login Page
+- Enter your credentials to access the platform.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Dashboard
+- Admin users can manage events, view sales data, and monitor user activity.
+- Regular users can browse available events and purchase tickets.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Event Listing
+- Displays a list of upcoming events.
+- Clicking on an event shows detailed information, including ticket availability.
 
-### `npm run eject`
+#### Ticket Purchase
+- Select the number of tickets and proceed to payment.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### User Profile
+- View and manage your ticket purchases and account settings.
